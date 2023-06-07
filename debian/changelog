@@ -1,3 +1,16 @@
+libcap2 (1:2.44-1ubuntu0.22.04.1) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: process memory exhaustion in pthread_create()
+    - debian/patches/CVE-2023-2602.patch: correct the check of
+      pthread_create()'s return value in psx/psx.c.
+    - CVE-2023-2602
+  * SECURITY UPDATE: integer overflow in _libcap_strdup()
+    - debian/patches/CVE-2023-2603.patch: properly handle large strings in
+      libcap/cap_alloc.c.
+    - CVE-2023-2603
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 07 Jun 2023 08:31:30 -0400
+
 libcap2 (1:2.44-1build3) jammy; urgency=high
 
   * No change rebuild for ppc64el baseline bump.
