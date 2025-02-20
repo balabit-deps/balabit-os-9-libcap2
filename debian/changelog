@@ -1,3 +1,14 @@
+libcap2 (1:2.44-1ubuntu0.22.04.2) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: incorrect group name handling
+    - debian/patches/CVE-2025-1390-1.patch: fix potential configuration
+      parsing error in pam_cap/pam_cap.c.
+    - debian/patches/CVE-2025-1390-2.patch: add a test for bad group prefix
+      in pam_cap/sudotest.conf.
+    - CVE-2025-1390
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 20 Feb 2025 10:51:02 -0500
+
 libcap2 (1:2.44-1ubuntu0.22.04.1) jammy-security; urgency=medium
 
   * SECURITY UPDATE: process memory exhaustion in pthread_create()
